@@ -16,19 +16,18 @@
 
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>18.0.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -47,7 +46,7 @@
         <resources>
             <resource>
                 <directory>${project.build.directory}/dependency</directory>
-                <targetPath>lib</targetPath>
+                <targetPath>lib</targetPath> <!--что бы всё сгружало в lib-->
             </resource>
         </resources>
         <plugins>
@@ -100,7 +99,7 @@
                 <version>3.1.0</version>
             </plugin>
 
-            <!-- Usual compilation -->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -110,7 +109,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Run java-fx app over Maven -->
+
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
